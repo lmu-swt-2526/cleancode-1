@@ -109,7 +109,7 @@ public class TrieStudentDatabase implements StudentDatabase {
     for (int i = 0; i < data.size(); i++) {
       var element = data.get(i);
       if (element.getName().length() > maximum.length()) {
-        maximum = element.getId();
+        maximum = element.getName();
       }
     }
     return maximum;

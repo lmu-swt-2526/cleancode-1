@@ -63,6 +63,9 @@ public class Shell {
 
   //////// Public Methods of Shell Class //////////
 
+  /**
+   * Run the shell.
+   */
   public void run() {
     while (isShellRunning) {
       printMenu();

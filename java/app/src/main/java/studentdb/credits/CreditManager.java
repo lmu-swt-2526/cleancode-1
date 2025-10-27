@@ -46,7 +46,14 @@ public class CreditManager {
       if (details.status() != StatusData.FINISHED) { continue; }
 
       var grade = details.grade();
-      // In theory we COULD include grades 'F' in the calculation of average grades, because currently we only store the last grade that was registered for a course. So old fails of a course will not hurt if the course was passed later. BUT that courses are unique and only the last value is stored each time is an implementation detail of StudentDatabase that may change in the future. Because of this, IF we want to include grades 'F' in the average grade calculation, we would need to make sure that no other grade exists for the same course in the student's records. This sounds cumbersome, so as long as there are no more specific requirements, we just ignore all 'F' grades.
+      // In theory we COULD include grades 'F' in the calculation of average grades,
+      // because currently we only store the last grade that was registered for a course.
+      // So old fails of a course will not hurt if the course was passed later.
+      // BUT that courses are unique and only the last value is stored each time is an implementation detail
+      // of StudentDatabase that may change in the future. Because of this, IF we want to include grades 'F'
+      // in the average grade calculation, we would need to make sure that no other grade exists for the same course
+      // in the student's records. This sounds cumbersome, so as long as there are no more specific requirements,
+      // we just ignore all 'F' grades.
       if (grade == CourseAttendanceData.CourseAttendanceDetailsGrade.F){
         continue;
       }
