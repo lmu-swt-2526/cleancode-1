@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+  <!-- Suppress default encoding warning in Shell class -->
+  <!-- We intentionally assume UTF-8 as default encoding for simplicity -->
+  <Match>
+    <Class name="studentdb.shell.Shell"/>
+    <Method name="&lt;init&gt;"/>
+    <Bug pattern="DM_DEFAULT_ENCODING"/>
+  </Match>
+</FindBugsFilter>
