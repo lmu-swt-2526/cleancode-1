@@ -25,7 +25,7 @@ public class TrieStudentDatabase implements StudentDatabase {
   }
 
   @Override
-  public void addStudent(Stud s) throws DatabaseEntryException {
+  public void addStudent(Student student) throws DatabaseEntryException {
     Objects.requireNonNull(s, "Student cannot be null");
     String n = s.getName();
     TrieNode c = root;
